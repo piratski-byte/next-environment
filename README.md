@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Next Environment (VS Code)
 
-## Getting Started
+Базовый репозиторий для настройки комфортной среды разработки на **Next.js** с использованием **VS Code**.
 
-First, run the development server:
+## 🔧 Рекомендуемые расширения VS Code
+
+Рекомендуемые расширения для эффективной работы с Next.js:
+
+- [Next.js Snippets](https://marketplace.visualstudio.com/items?itemName=PulkitGangwar.nextjs-snippets) — сниппеты для Next.js  
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) — автоподсказки классов Tailwind (если используется)  
+- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) — синхронное переименование JSX/TSX-тегов  
+- [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) — автозакрытие тегов  
+- [Prettier – Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) — автоформатирование кода  
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) — линтинг кода по правилам  
+- [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense) — автоподсказки путей к файлам  
+
+> 💡 Все рекомендуемые расширения перечислены в `.vscode/extensions.json` и будут предложены при открытии проекта в VS Code.
+
+---
+
+## ⚙️ Настройки
+
+Редактор автоматически применяет настройки из `.vscode/settings.json`.
+> 💡 Код автоматически форматируется при сохранении, если установлены Prettier и ESLint, а в настройках VS Code включён `editor.formatOnSave`.
+
+## 🚀 Быстрый старт
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/next-environment.git
+cd next-environment
+npm install
+npm run dev       # Запуск dev-сервера Next.js
+npm run build     # Сборка production версии
+npm start         # Запуск production-сервера
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Линтинг и форматирование
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Для проверки кода на ошибки и соответствие стилю:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run format:check
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
+Для автоматического исправления:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint:fix
+npm run format
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
