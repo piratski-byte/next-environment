@@ -21,4 +21,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # Environment files
+package-lock.json
 .env*
